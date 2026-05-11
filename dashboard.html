@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="/js/script.js"></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul class="navbar-list">
+            <li class="navbar-item"><a href="stok.html" class="navbar-link">Informasi Bahan Ajar</a></li>
+            <li class="navbar-item"><a href="tracking.html" class="navbar-link">Tracking Pengiriman</a></li>
+            <li class="navbar-item navbar-item--dropdown">
+                <a href="#" class="navbar-link navbar-link--dropdown">Laporan</a>
+                <div class="navbar-dropdown">
+                <a href="monitoring.html" class="navbar-dropdown-item">Monitoring Progress DO Bahan Ajar</a>
+                <a href="#" class="navbar-dropdown-item">Rekap Bahan Ajar</a>
+                </div>
+            </li>
+            <li class="navbar-item"><a href="#" class="navbar-link">Histori Transaksi Bahan Ajar</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Dashboard Aplikasi SITTA</h2>
+                </div>
+                <div class="card-body">
+                    <p id="greetings"></p>
+                    <a href="/index.html" onclick="">Logout</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            greetings(document.getElementById('greetings'));
+        </script>
+    </body>
+</html>

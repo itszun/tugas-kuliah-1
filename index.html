@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="/js/script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Login</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/" onsubmit="actionLogin(event)">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" value="admin@admin.com"><br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" value="admin123"><br><br>
+                lupa password? <a href="#" onclick="openModal('modalLupaPassword')">Klik di sini</a><br><br>
+                <label id="error-msg" class="text-danger" style="display: none;">Email/password yang anda masukkan salah</label><br><br>
+
+                        <button type="submit" class="btn btn-primary">Login</button><br><br>
+                        <a href="#" onclick="openModal('modalDaftar')">Belum punya akun? Daftar di sini</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example Modal -->
+        <div id="modalLupaPassword" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="closeModal('modalLupaPassword')">&times;</span>
+                    <h2>Lupa Password</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Masukkan email Anda dan kami akan mengirimkan tautan untuk mereset password.</p>
+                    <input type="email" placeholder="Email Anda" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('modalLupaPassword')">Tutup</button>
+                    <button type="button" class="btn btn-primary" onclick="closeModal('modalLupaPassword')">OK</button>
+                </div>
+            </div>
+        </div>
+        <div id="modalDaftar" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="closeModal('modalDaftar')">&times;</span>
+                    <h2>Daftar Akun</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Form pendaftaran akun baru.</p>
+                    <input type="text" placeholder="Nama Lengkap" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;">
+                    <input type="email" placeholder="Email" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;">
+                    <input type="password" placeholder="Password" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('modalDaftar')">Tutup</button>
+                    <button type="button" class="btn btn-primary" onclick="closeModal('modalDaftar')">OK</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Tracking Pengiriman</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="/js/data.js"></script>
+        <script src="/js/script.js"></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul class="navbar-list">
+            <li class="navbar-item"><a href="stok.html" class="navbar-link">Informasi Bahan Ajar</a></li>
+            <li class="navbar-item active"><a href="tracking.html" class="navbar-link">Tracking Pengiriman</a></li>
+            <li class="navbar-item navbar-item--dropdown">
+                <a href="#" class="navbar-link navbar-link--dropdown">Laporan</a>
+                <div class="navbar-dropdown">
+                <a href="monitoring.html" class="navbar-dropdown-item">Monitoring Progress DO Bahan Ajar</a>
+                <a href="#" class="navbar-dropdown-item">Rekap Bahan Ajar</a>
+                </div>
+            </li>
+            <li class="navbar-item"><a href="#" class="navbar-link">Histori Transaksi Bahan Ajar</a></li>
+            </ul>
+        </nav>
+        <div class="container w-100">
+            <div class="card w-75">
+                <div class="card-header">
+                    <h2>Tracking Pengiriman</h2>
+                </div>
+                <div class="card-body">
+                    <div class="search-row">
+                        <form action="" id="searchForm" onsubmit="searchTracking(event)">
+                            <input type="text" id="searchQuery" style="width: 300px;" placeholder="Masukkan nomor DO (contoh: 2023001234)" />
+                            <br>
+                            <br>
+                            <button type="button" class="btn btn-primary" onclick="searchTracking(event)">Cari Tracking</button>
+                        </form>
+                    </div>
+                    <p id="searchMessage" class="text-danger" style="display:none; margin-top:1rem;"></p>
+                    <div id="trackingSummary" class="tracking-summary" style="display:none; margin-top:1rem;"></div>
+                    <table class="table" style="margin-top:1rem;">
+                        <thead>
+                            <tr>
+                                <th>Waktu</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody id="trackingTableBody">
+                            <tr>
+                                <td colspan="2" class="text-secondary">Masukkan nomor DO untuk melihat tracking.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
